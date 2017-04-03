@@ -1096,12 +1096,13 @@ SlingshotView.prototype = {
     // function to call shutdown (QAD!!!)
     powerDialog: function(button) {
 
+        // closes the menu
+        this.close(true);
+
         // code to run shutdonw here!
         Util.spawnCommandLine("cinnamon-session-quit --power-off");
 
         //button.set_checked(true); 
-        // closes the menu
-        this.close(true);
     },
 
     _setupUi: function() {
