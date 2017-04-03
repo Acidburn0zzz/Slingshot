@@ -16,7 +16,7 @@ const St = imports.gi.St;
 const Tooltips = imports.ui.tooltips;
 const Util = imports.misc.util;
 
-const AppletPath = imports.ui.appletManager.applets['slingshot@jfarthing84'];
+const AppletPath = imports.ui.appletManager.applets['slingshot@elbullazul'];
 const Granite = AppletPath.granite;
 
 /** App ***********************************************************************/
@@ -1093,6 +1093,17 @@ SlingshotView.prototype = {
         //global.log('Default Rows: ' + this._defaultRows);
     },
 
+    // function to call shutdown (QAD!!!)
+    powerDialog: function(button) {
+
+        // code to run shutdonw here!
+        Util.spawnCommandLine("cinnamon-session-quit --power-off");
+
+        //button.set_checked(true); 
+        // closes the menu
+        this.close(true);
+    },
+
     _setupUi: function() {
 
         global.log('Setting up UI...');
@@ -1137,9 +1148,25 @@ SlingshotView.prototype = {
             return event.button === 3;
         }));
 
+        // Power Button (addon by Christian Medel (Elbullazul)
+        let button = new St.Button({
+            label: 'Poweroff',
+            //toggle_mode: false,
+            style_class: 'button',
+        });
+
+        button.connect('clicked', Lang.bind(this, this.powerDialog));
+
+        let btnIcon = new St.Icon({
+            icon_size: 16,
+            gicon: new Gio.ThemedIcon({ name: 'shutdown-symbolic' })
+        });
+        button.add_actor(btnIcon);
+
         this.top.add(this.viewSelector.actor);
         this.top.add(topSeparator, { expand: true });
         this.top.add(this.searchbar.actor);
+        this.top.add(button);
 
         this.center = new St.BoxLayout({
             margin_top: 0,
@@ -1800,7 +1827,7 @@ var Slingshot = {
         Applet.TextIconApplet.prototype._init.call(this, orientation, panelHeight, instanceId);
 
         try {
-            this.settings = new Settings.AppletSettings(this, 'slingshot@jfarthing84', instanceId);
+            this.settings = new Settings.AppletSettings(this, 'slingshot@elbullazul', instanceId);
 
             this.settings.bindProperty(Settings.BindingDirection.BIDIRECTIONAL, 'slingshot-icon-size', 'iconSize');
             this.settings.bindProperty(Settings.BindingDirection.BIDIRECTIONAL, 'slingshot-columns', 'columns', Lang.bind(this, function() {
