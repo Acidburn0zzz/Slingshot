@@ -257,10 +257,19 @@ AppEntry.prototype = {
             vertical: true
         });
 
-        let appIcon = new St.Icon({
-            icon_size: this.iconSize,
-            gicon: this.icon
-        });
+        let appIcon;
+        if (this.icon != null) {
+            appIcon = new St.Icon({
+                icon_size: this.iconSize,
+                gicon: this.icon
+            });
+        } else {
+            appIcon = new St.Icon({
+                icon_size: this.iconSize,
+                icon_name: 'exec',
+                icon_type: St.IconType.FULLCOLOR
+            });
+        }
         layout.add_actor(appIcon);
 
         let appLabel = new St.Label({
@@ -628,11 +637,22 @@ SearchItem.prototype = {
 
         this._app = app;
 
-        this._icon = new St.Icon({
-            icon_size: this.iconSize,
-            gicon: app.icon,
-            margin_left: 74 - this.iconSize
-        });
+        let appIcon;
+        if (app.icon != null) {
+            appIcon = new St.Icon({
+                icon_size: this.iconSize,
+                gicon: app.icon,
+                margin_left: 74 - this.iconSize
+            });
+        } else {
+            appIcon = new St.Icon({
+                icon_size: this.iconSize,
+                icon_name: 'exec',
+                icon_type: St.IconType.FULLCOLOR,
+                margin_left: 74 - this.iconSize
+            });
+        }
+        this._icon = appIcon;
 
         this._nameLabel = new St.Label({
             text: '<b><span size="larger">' + this._fix(app.name) + '</span></b>'
