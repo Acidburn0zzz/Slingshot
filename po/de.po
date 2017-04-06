@@ -1,0 +1,112 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-04-04 09:10+0200\n"
+"PO-Revision-Date: 2017-04-04 09:18+0200\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7.1\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: de\n"
+
+#: applet.js:1144
+msgid "Search Apps..."
+msgstr "Anwendungen suchen …"
+
+#. cinnamon-slingshot->settings-schema.json->menu-editor-button->description
+msgid "Open the menu editor"
+msgstr "Menüeditor öffnen"
+
+#. cinnamon-slingshot->settings-schema.json->menu-editor-button->tooltip
+msgid "Press this button to customize your menu entries."
+msgstr "Diesen Knopf drücken um die Menüeinträge anzupassen."
+
+#. cinnamon-slingshot->settings-schema.json->menu-icon-custom->description
+msgid "Use a custom icon"
+msgstr "Ein benutzerdefiniertes Symbol verwenden"
+
+#. cinnamon-slingshot->settings-schema.json->menu-icon-custom->tooltip
+msgid "Unchecking this allows the theme to set the icon"
+msgstr "Durch Abwählen wird es dem Thema erlaubt, das Symbol einzustellen"
+
+#. cinnamon-slingshot->settings-schema.json->slingshot-use-
+#. category->description
+msgid "Use category view"
+msgstr "Kategorienansicht verwenden"
+
+#. cinnamon-slingshot->settings-schema.json->slingshot-use-category->tooltip
+msgid "Default to category view."
+msgstr "Standard auf Kategorienansicht"
+
+#. cinnamon-slingshot->settings-schema.json->slingshot-rows->description
+msgid "Rows:"
+msgstr "Zeilen:"
+
+#. cinnamon-slingshot->settings-schema.json->slingshot-rows->tooltip
+msgid "Set the Slingshot row count."
+msgstr "Die Anzahl der Zeilen in Slingshot auswählen."
+
+#. cinnamon-slingshot->settings-schema.json->slingshot-rows->units
+msgid "rows"
+msgstr "Zeilen"
+
+#. cinnamon-slingshot->settings-schema.json->slingshot-icon-size->description
+msgid "Icon size:"
+msgstr "Symbolgröße:"
+
+#. cinnamon-slingshot->settings-schema.json->slingshot-icon-size->tooltip
+msgid "Set the Slingshot icon size."
+msgstr "Die Größe der Symbole in Slingshot auswählen."
+
+#. cinnamon-slingshot->settings-schema.json->slingshot-icon-size->units
+msgid "pixels"
+msgstr "Pixel"
+
+#. cinnamon-slingshot->settings-schema.json->menu-icon->description
+msgid "Icon"
+msgstr "Symbol"
+
+#. cinnamon-slingshot->settings-schema.json->menu-icon->tooltip
+msgid "Select an icon to show in the panel."
+msgstr "Symbol auswählen, welches in der Leiste angezeigt wird."
+
+#. cinnamon-slingshot->settings-schema.json->overlay-key->description
+msgid "Keyboard shortcut to open and close Slingshot"
+msgstr "Tastenkombinationen zum Öffnen und Schließen von Slingshot"
+
+#. cinnamon-slingshot->settings-schema.json->menu-label->description
+msgid "Text"
+msgstr "Text"
+
+#. cinnamon-slingshot->settings-schema.json->menu-label->tooltip
+msgid "Enter custom text to show in the panel."
+msgstr "Einen eigenen Text eingeben, der in der Leiste angezeigt werden soll."
+
+#. cinnamon-slingshot->settings-schema.json->slingshot-columns->description
+msgid "Columns:"
+msgstr "Spalten:"
+
+#. cinnamon-slingshot->settings-schema.json->slingshot-columns->tooltip
+msgid "Set the Slingshot column count."
+msgstr "Die Anzahl der Spalten in Slingshot auswählen."
+
+#. cinnamon-slingshot->settings-schema.json->slingshot-columns->units
+msgid "columns"
+msgstr "Spalten"
+
+#. cinnamon-slingshot->metadata.json->description
+msgid "A clone of Pantheon's Slingshot launcher in the form of a Cinnamon applet."
+msgstr "Ein Klon von Pantheon's Shlingshot Startmenü in der Form eines Applets für Cinnamon."
+
+#. cinnamon-slingshot->metadata.json->name
+msgid "Slingshot"
+msgstr "Slingshot"
