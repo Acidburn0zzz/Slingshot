@@ -677,7 +677,7 @@ SearchItem.prototype = {
 
         this.actor = new St.Button({
             height: this.iconSize + 10,
-            style_class: 'button app',
+            style_class: 'button app search',
             x_align: Clutter.ActorAlign.START,
             x_fill: true
         });
@@ -1122,7 +1122,7 @@ SlingshotView.prototype = {
         // code to run shutdonw here!
         Util.spawnCommandLine("cinnamon-session-quit --power-off");
 
-        //button.set_checked(true); 
+        //button.set_checked(true);
     },
 
     _setupUi: function() {
@@ -1184,9 +1184,9 @@ SlingshotView.prototype = {
         });
         button.add_actor(btnIcon);
 
-        this.top.add(this.viewSelector.actor);
-        this.top.add(topSeparator, { expand: true });
         this.top.add(this.searchbar.actor);
+        this.top.add(topSeparator, { expand: true });
+        this.top.add(this.viewSelector.actor);
         this.top.add(button);
 
         this.center = new St.BoxLayout({
@@ -1846,6 +1846,8 @@ var Slingshot = {
 
     _init: function(orientation, panelHeight, instanceId) {
         Applet.TextIconApplet.prototype._init.call(this, orientation, panelHeight, instanceId);
+
+        this.setAllowedLayout(Applet.AllowedLayout.BOTH);
 
         try {
             this.settings = new Settings.AppletSettings(this, 'slingshot@elbullazul', instanceId);
